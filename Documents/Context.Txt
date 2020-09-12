@@ -1,0 +1,17 @@
+#### Context Explained For Jimmy :
+#
+# I've detected a command because the message
+# content started with './'.
+#
+# I parse it and call your function, in this case
+# it's called 'ping'.
+#
+# Before calling it, I package up some information
+# about the message and current state of things.
+#
+# I give it to you when I call your function by
+# passing it as the first argument.
+#
+####
+
+ping(context)

@@ -1,0 +1,12 @@
+#! /bin/bash
+
+shopt -s expand_aliases
+
+alias sb='CacheCWD=$PWD && cd '$PWD' && python3 ./SquatchBot/ >>./SquatchBot/state/stdout 2>>./SquatchBot/state/stderr && cd $CacheCWD'
+
+while true
+do
+sb
+echo -e '\nSquatchBot : Restart In 4 Seconds' >>./SquatchBot/state/stdout 2>>./SquatchBot/state/stderr
+sleep 4
+done

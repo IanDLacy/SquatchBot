@@ -1,0 +1,17 @@
+# Referenced From 'https://github.com/github/gitignore/blob/master/Python.gitignore'
+# I will add to this as necessary.
+# I just don't want a giant file I don't know anything about.
+
+# API
+token
+
+# Logs
+log
+stderr
+stdout
+
+# Python
+__pycache__/
+
+# State
+bot
