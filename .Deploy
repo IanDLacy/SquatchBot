@@ -1,0 +1,22 @@
+#! /bin/bash
+
+####
+#
+# ReadMe :
+#
+# This script is designed to be run on a GCP VM instance .
+# It has been tested on the Ubuntu 20.04 image [ ubuntu-2004-focal-v20200907 ] .
+#
+# Running This Script Will :
+# - Update The System
+# - Install Dependencies
+#
+####
+
+sudo apt-get -y update
+sudo apt-get -y upgrade
+sudo apt-get -y install python3-pip python3-dev libffi-dev libnacl-dev ffmpeg
+sudo apt-get -y autoremove
+pip3 install -U discord.py[voice] youtube_dl
+clear
+echo -e "\n\n\n\n\n\n\n\n\t\aYou're all set! \b\n\n\n\n\n\n\n\n"
