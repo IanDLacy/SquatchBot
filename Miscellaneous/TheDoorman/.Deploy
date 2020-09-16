@@ -1,0 +1,39 @@
+#! /bin/bash
+
+####
+#
+# ReadMe :
+#
+# This script is designed to be run on a GCP VM instance .
+# It has been tested on the Ubuntu 20.04 image [ ubuntu-2004-focal-v20200907 ] .
+#
+# Running This Script Will :
+# - Update The System
+# - Install Dependencies
+# - Extract & Install The Project
+# - Call You A Noob
+# - Start The Project In The Background
+#
+# Requirements :
+# 1. Upload this script to your home folder .
+# 2. Upload your project named "TheDoorman.zip" ( with no top-level directory in the file ) to your home folder .
+#
+# To run this script for the first time, paste the following command :
+# cd ~ && chmod +x ./.Deploy && ./.Deploy
+#
+####
+
+cd ~
+sudo apt-get -y update
+sudo apt-get -y upgrade
+sudo apt-get -y install python3-pip python3-dev libffi-dev libnacl-dev ffmpeg unzip
+sudo apt-get -y autoremove
+pip3 install -U discord.py[voice] youtube_dl
+mkdir -v ./TheDoorman/
+cd ./TheDoorman/
+mv -v ../.Deploy ./.Deploy
+mv -v ../TheDoorman.zip ./TheDoorman.zip
+unzip ./TheDoorman.zip
+clear
+echo -e "\n\n\n\n\n\n\n\n\t\aYou're all set, noob! \b\n\n\n\n\n\n\n\n"
+python3 ./TheDoormanBot.py &

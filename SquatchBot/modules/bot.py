@@ -78,9 +78,13 @@ bot = commands.Bot	(
 
 import os
 
-for file in os.listdir( './SquatchBot/extensions' ) :
+for file in os.listdir( './SquatchBot/extensions/commands/' ) :
 	if file.endswith('.py') :
-		bot.load_extension(f'extensions.{file[:-3]}')
+		bot.load_extension(f'extensions.commands.{file[:-3]}')
+
+for file in os.listdir( './SquatchBot/extensions/cogs/' ) :
+	if file.endswith('.py') :
+		bot.load_extension(f'extensions.cogs.{file[:-3]}')
 
 @bot.event
 async def on_ready():

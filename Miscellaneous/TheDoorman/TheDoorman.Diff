@@ -1,0 +1,63 @@
+diff --git a/TheDoormanCog.py b/TheDoormanCog_fixed.py
+--- a/TheDoormanCog.py
++++ b/TheDoormanCog_fixed.py
+  
+-					soundFiles = ['C:/Users/thede/Desktop/BOT - The Doorman Sounds/aw shit.mp3',
+-					'C:/Users/thede/Desktop/BOT - The Doorman Sounds/BOI.mp3',
+-					'C:/Users/thede/Desktop/BOT - The Doorman Sounds/Cell - Hello.mp3',
+-					'C:/Users/thede/Desktop/BOT - The Doorman Sounds/ggoodmornin.mp3',
+-					'C:/Users/thede/Desktop/BOT - The Doorman Sounds/glass greetings.mp3',
+-					'C:/Users/thede/Desktop/BOT - The Doorman Sounds/go your own way.mp3',
+-					'C:/Users/thede/Desktop/BOT - The Doorman Sounds/HELLO - Carve Stone.mp3',
+-					'C:/Users/thede/Desktop/BOT - The Doorman Sounds/Hello Hi.mp3',
+-					'C:/Users/thede/Desktop/BOT - The Doorman Sounds/hello mario.mp3',
+-					'C:/Users/thede/Desktop/BOT - The Doorman Sounds/hey - annoying.mp3',
+-					'C:/Users/thede/Desktop/BOT - The Doorman Sounds/hey - navi.mp3',
+-					'C:/Users/thede/Desktop/BOT - The Doorman Sounds/hey stinky.mp3',
+-					'C:/Users/thede/Desktop/BOT - The Doorman Sounds/kirby hi.mp3',
+-					'C:/Users/thede/Desktop/BOT - The Doorman Sounds/longtimenosee.mp3',
+-					'C:/Users/thede/Desktop/BOT - The Doorman Sounds/my ball.mp3',
+-					'C:/Users/thede/Desktop/BOT - The Doorman Sounds/my brother luigi - full.mp3',
+-					'C:/Users/thede/Desktop/BOT - The Doorman Sounds/my brother luigi.mp3',
+-					'C:/Users/thede/Desktop/BOT - The Doorman Sounds/my egg.mp3',
+-					'C:/Users/thede/Desktop/BOT - The Doorman Sounds/NANI.mp3',
+-					'C:/Users/thede/Desktop/BOT - The Doorman Sounds/OBAMA.mp3',
+-					'C:/Users/thede/Desktop/BOT - The Doorman Sounds/OH BIG.mp3',
+-					'C:/Users/thede/Desktop/BOT - The Doorman Sounds/oiiiiii.mp3',
+-					'C:/Users/thede/Desktop/BOT - The Doorman Sounds/Prof Oak - Welcome Back.mp3',
+-					'C:/Users/thede/Desktop/BOT - The Doorman Sounds/this is a bathtub.mp3',
+-					'C:/Users/thede/Desktop/BOT - The Doorman Sounds/welcome to mario kart 2.mp3',
+-					'C:/Users/thede/Desktop/BOT - The Doorman Sounds/welcome to mario kart.mp3',
+-					'C:/Users/thede/Desktop/BOT - The Doorman Sounds/YEAH.mp3']
+
++					soundFiles = ['aw shit.mp3',
++					'BOI.mp3',
++					'Cell - Hello.mp3',
++					'ggoodmornin.mp3',
++					'glass greetings.mp3',
++					'go your own way.mp3',
++					'HELLO - Carve Stone.mp3',
++					'Hello Hi.mp3',
++					'hello mario.mp3',
++					'hey - annoying.mp3',
++					'hey - navi.mp3',
++					'hey stinky.mp3',
++					'kirby hi.mp3',
++					'longtimenosee.mp3',
++					'my ball.mp3',
++					'my brother luigi - full.mp3',
++					'my brother luigi.mp3',
++					'my egg.mp3',
++					'NANI.mp3',
++					'OBAMA.mp3',
++					'OH BIG.mp3',
++					'oiiiiii.mp3',
++					'Prof Oak - Welcome Back.mp3',
++					'this is a bathtub.mp3',
++					'welcome to mario kart 2.mp3',
++					'welcome to mario kart.mp3',
++					'YEAH.mp3']
+ 
+-					source = discord.PCMVolumeTransformer(discord.FFmpegPCMAudio(mySound))
+
++					source = discord.PCMVolumeTransformer(discord.FFmpegPCMAudio('./TheDoorman_Sounds/'+mySound))

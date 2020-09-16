@@ -1,17 +1,21 @@
 # Referenced From 'https://github.com/github/gitignore/blob/master/Python.gitignore'
-# I will add to this as necessary.
-# I just don't want a giant file I don't know anything about.
-
-# API
-token
-
-# Logs
-log
-stderr
-stdout
+# I will add to this as necessary .
+# I just don't want a giant file I don't know anything about .
 
 # Python
 __pycache__/
 
-# State
-bot
+# API Token
+SquatchBot/state/token
+
+# Logs
+SquatchBot/state/log
+SquatchBot/state/stderr
+SquatchBot/state/stdout
+
+# Configuration
+SquatchBot/state/bot
+
+# Bots
+SquatchBot/bots/*/
+SquatchBot/bots/*.pyz
