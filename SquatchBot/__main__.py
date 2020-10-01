@@ -1,3 +1,5 @@
-import modules.origin
-import modules.log
-import modules.bot
+import SquatchOS
+
+SquatchOS.start ()
+
+SquatchOS.stop ()

@@ -2,11 +2,11 @@
 
 shopt -s expand_aliases
 
-alias sb='CacheCWD=$PWD && cd '$PWD' && python3 ./SquatchBot/ >>./SquatchBot/state/stdout 2>>./SquatchBot/state/stderr && cd $CacheCWD'
+alias sb='CachedWD=$PWD && cd '$PWD/SquatchBot' && python3 ./ >>./SquatchOS/state/stdout 2>>./SquatchOS/state/stderr && cd $CachedWD'
 
 while true
 do
 sb
-echo -e '\nSquatchBot : Restart In 4 Seconds' >>./SquatchBot/state/stdout 2>>./SquatchBot/state/stderr
+echo -e '\nSquatchBot : Restart In 4 Seconds' >>./SquatchOS/state/stdout 2>>./SquatchOS/state/stderr
 sleep 4
 done

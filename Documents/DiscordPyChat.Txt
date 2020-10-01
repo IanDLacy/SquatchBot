@@ -1,0 +1,26 @@
+ButternutSquatchToday at 4:07 PM
+Hello, I hope this is not too dumb of a question, but I've read the documentation thoroughly, searched extensively, looked at a handful of examples, and even probed the Discord.Py source code for some insight, but I haven't found anything that mentions what I'm trying to do, other than cog_name and cog of Command, but setting those seem to have no effect.
+What I'd like to do is split my 'cog' into multiple files because what I have planned is going to get large pretty quickly. My separate files [ 'extensions' , 'modules' ] do not specifically need to be part of the cog in the class-sense.
+Ideally I would like to load extensions containing a single command, and attach them to the cog of my choice, specifically so that they end up under a specific category, similar to how this happens with the uncategorized section.
+So I'm wondering, is this possible ( either loading extensions as part of a cog, or assigning commands an arbitrary category ) ? If it is possible, what is the recommended way to do it? I have a couple of ideas to implement this, but I'd like to do it without destroying the built-in help command if possible, and having them actually load in as parts of a 'real' cog would be nice too.
+Feel free do DM me with follow-up questions and answers, or at least @mention me here to make sure I see responses. Thank you in advance for your time.
+
+with PikalaxALT as furry: passToday at 4:09 PM
+@ButternutSquatch a single class should be all in one file, but you can split up helper methods into different files, or you can have a cascade of subclasses
+
+ButternutSquatchToday at 4:15 PM
+@with PikalaxALT as furry: pass Can you explain a little bit about putting helper methods into different files, and how a cascade of subclasses might help me accomplish what I'm trying to do? Are you talking about splitting stuff out into different modules and importing them into my cog?
+
+with PikalaxALT as furry: passToday at 4:15 PM
+@ButternutSquatch precisely
+this falls under the purview of basic python and is nothing d.py-specific tho
+
+ButternutSquatchToday at 4:25 PM
+@with PikalaxALT as furry: pass Ah okay awesome! That's pretty much exactly the kind of info I was looking for. I was pondering doing something like that, but I wanted to make sure to use what is in-built to Discord.Py if it exits, but if it's not there, I'm free to solve the problem on my own. So just to clarify, there's nothing I'm missing in the Discord.Py functionality that can append out-of-cog or other-cog commands to an arbitrary cog|category?
+
+with PikalaxALT as furry: passToday at 4:26 PM
+i can't assume one way or the other, i can only wish you the best
+
+ButternutSquatchToday at 4:31 PM
+@with PikalaxALT as furry: pass Ok well based on the fact the docs don't mention anything, I haven't found anything|anybody talking about it, and your responses, I guess I'll make that assumption lol.
+I really appreciate the advice, and hope you have a good day!

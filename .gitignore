@@ -5,16 +5,19 @@
 # Python
 __pycache__/
 
+# VS Code
+.vscode/
+
 # API Token
-SquatchBot/state/token
+SquatchBot/SquatchOS/state/token
 
 # Logs
-SquatchBot/state/log
-SquatchBot/state/stderr
-SquatchBot/state/stdout
+SquatchBot/SquatchOS/state/log
+SquatchBot/SquatchOS/state/stderr
+SquatchBot/SquatchOS/state/stdout
 
 # Configuration
-SquatchBot/state/bot
+SquatchBot/SquatchOS/state/bot
 
 # Bots
 SquatchBot/bots/*/
