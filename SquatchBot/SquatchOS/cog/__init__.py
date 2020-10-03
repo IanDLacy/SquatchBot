@@ -12,3 +12,4 @@ def teardown ( bot ) :
 class SquatchOS :
 	def __init__ ( self , bot ) :
 		self.bot = bot
+		self.bot.help_command.cog = self

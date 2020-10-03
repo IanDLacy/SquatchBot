@@ -25,7 +25,7 @@ def stop () :
 
 	# Future Stuff Goes Here Maybe
 
-	exit ('\nSquatchOS : SquatchOS Stopped \n')
+	exit ( '\nSquatchOS : SquatchOS Stopped \n' )
 
 def extension ( *args , **kwargs ) :
 

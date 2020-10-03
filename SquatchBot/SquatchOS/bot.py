@@ -1,12 +1,20 @@
 import SquatchOS
 from discord.ext import commands
 
+class SquatchHelp ( commands.DefaultHelpCommand ) :
+
+	def get_ending_note ( self ) :
+		return f'Run `{self.clean_prefix}{self.invoked_with} [ Category | Command ]` for specifics.\n'
+	
+	async def send_pages ( self ) :
+		await self.context.message.delete ()
+		destination = self.get_destination ()
+		for page in self.paginator.pages :
+			await destination.send ( page , delete_after = 15 )
+
 def configure (  ) :
 
 	print ( '\nSquatchOS : Configuring Bot' )
-
-	commands.DefaultHelpCommand.get_ending_note = lambda self : \
-		f'Run `{self.clean_prefix}{self.invoked_with} [ Category | Command ]` for specifics.\n'
 
 	bot = commands.Bot	(
 
@@ -39,7 +47,7 @@ def configure (  ) :
 				case_insensitive = True ,
 				description = 'SquatchBot!' ,
 				self_bot = False ,
-				help_command = commands.DefaultHelpCommand	(
+				help_command = SquatchHelp	(
 
 										width = 128 ,
 										sort_commands = True ,
