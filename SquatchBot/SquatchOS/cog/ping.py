@@ -2,7 +2,7 @@ from discord.ext import commands
 
 import SquatchShell
 
-@commands.command	(
+@ commands.command	(
 
 			name = 'ping' ,
 			brief = 'SquatchOS Latency' ,
@@ -17,6 +17,6 @@ import SquatchShell
 			cooldown_after_parsing = False
 
 			)
-@SquatchShell.command (  )
+@ SquatchShell.Command (  )
 async def ping ( self , context ) :
 	return f'Pong!\n{ round ( self.bot.latency*1000 ) } ms'

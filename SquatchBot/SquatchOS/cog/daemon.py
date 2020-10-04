@@ -2,7 +2,7 @@ import SquatchShell
 
 from discord.ext import commands
 
-@commands.group	(
+@ commands.group	(
 
 		name = 'daemon' ,
 		brief = 'Control Other Bots' ,
@@ -18,25 +18,25 @@ from discord.ext import commands
 		cooldown_after_parsing = False
 
 		)
-@SquatchShell.command (  )
+@ SquatchShell.Command (  )
 async def daemon ( self , context ) :
 	# Yes I know this is super 'dangerous', I'll work security into it later lol .
 	return 'daemon'
 
-@daemon.command (  )
+@ daemon.command (  )
 async def deploy ( self , context ) :
 	# Zip must have an __main__.py in the root .
 	return 'deploy'
 
-@daemon.command (  )
+@ daemon.command (  )
 async def start ( self , context , package=None ) :
 	# Bot will be automatically restarted if it crashes or ends itself .
 	return 'start'
 
-@daemon.command (  )
+@ daemon.command (  )
 async def stop ( self , context , package=None ) :
 	return 'stop'
 
-@daemon.command (  )
+@ daemon.command (  )
 async def remove ( self , context , package=None ) :
 	return 'remove'

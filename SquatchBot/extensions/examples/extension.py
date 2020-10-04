@@ -2,7 +2,7 @@
 
 from discord.ext import commands
 
-@commands.command()
+@ commands.command()
 async def example(context) :
 	await context.send('Hello {0.display_name}.'.format(context.author))
 

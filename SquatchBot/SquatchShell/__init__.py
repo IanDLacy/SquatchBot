@@ -1,29 +1,29 @@
 import functools
 
-from discord.ext import commands
-
 import SquatchOS
 
-class command (  ) :
+class Command (  ) :
 
 	def __init__ ( self ) :
 		pass
 
 	def __call__ ( self , function ) :
 
-		@functools.wraps ( function )
-		async def decorator ( *args , **kwargs ) :
+		@ functools.wraps ( function )
+		async def decorator ( self , context , *args , **kwargs ) :
 
-			for arg in args :
+			await context.message.delete ()
 
-				if arg.__class__.__name__ == 'Context' :
+			content = '```fix\n' + str ( await function ( self , context , *args , **kwargs ) ) + '\n```'
 
-					await arg.message.delete (  )
-					await arg.send	(
+			ss = self.bot.get_cog('SquatchShell')
 
-							'```fix\n' + str ( await function ( *args , **kwargs ) ) + '\n```' ,
-							delete_after = 15
+			if ss.viewport :
+				try :
+					await ss.viewport.edit (content=content)
+				except :
+					ss.viewport = None
+			else :
+				ss.viewport = await context.send (content)
 
-							)
-					break
 		return decorator

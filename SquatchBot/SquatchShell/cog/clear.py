@@ -2,7 +2,7 @@ from discord.ext import commands
 
 import SquatchShell
 
-@commands.command	(
+@ commands.command	(
 
 			name = 'clear' ,
 			brief = 'Delete Messages' ,
@@ -17,7 +17,7 @@ import SquatchShell
 			ignore_extra = True ,
 			cooldown_after_parsing = False
 			)
-@ SquatchShell.command (  )
+@ SquatchShell.Command (  )
 async def clear ( self , context , amount=0 ) :
 
 	if amount > 8 or amount < 0 : amount = 0

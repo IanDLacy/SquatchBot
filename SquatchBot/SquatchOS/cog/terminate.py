@@ -31,7 +31,10 @@ from discord.ext import commands
 					cooldown_after_parsing = False
 
 					)
-@ SquatchShell.command (  )
+@ SquatchShell.Command (  )
 async def terminate ( self , context ) :
+	ss = context.bot.get_cog('SquatchShell')
+	if ss.viewport :
+		await ss.viewport.delete()
 	await context.bot.logout ()
 	return None

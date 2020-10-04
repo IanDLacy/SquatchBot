@@ -12,3 +12,4 @@ def teardown ( bot ) :
 class SquatchShell :
 	def __init__ ( self , bot ) :
 		self.bot = bot
+		self.viewport = None

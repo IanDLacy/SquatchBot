@@ -9,8 +9,19 @@ class SquatchHelp ( commands.DefaultHelpCommand ) :
 	async def send_pages ( self ) :
 		await self.context.message.delete ()
 		destination = self.get_destination ()
+
+		ss = self.context.bot.get_cog('SquatchShell')
+
 		for page in self.paginator.pages :
-			await destination.send ( page , delete_after = 15 )
+			if ss.viewport :
+				try :
+					await ss.viewport.edit (content=page)
+				except :
+					ss.viewport = None
+			else :
+				ss.viewport = await destination.send (page)
+
+			#await destination.send ( page , delete_after = 15 )
 
 def configure (  ) :
 
@@ -85,7 +96,7 @@ def configure (  ) :
 
 				)
 
-	@bot.event
+	@ bot.event
 	async def on_ready():
 		print('\nSquatchOS : Bot Started')
 		print('\nSquatchOS : SquatchOS Started')

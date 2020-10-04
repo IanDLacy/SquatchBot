@@ -23,7 +23,7 @@ from discord.ext import commands
 					cooldown_after_parsing = False
 
 					)
-@ SquatchShell.command (  )
+@ SquatchShell.Command (  )
 async def extension ( self , context , action='' , name='' ) :
 
 	message = ''
